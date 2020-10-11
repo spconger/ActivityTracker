@@ -37,7 +37,7 @@ class Project(models.Model):
     def __str__(self):
         return self.projectname
 
-    def timInDays(self):
+    def timeInDays(self):
         return (self.projectenddate-self.projectstartdate).days
 
     class Meta:

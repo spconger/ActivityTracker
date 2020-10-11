@@ -10,7 +10,10 @@ class ProjectTest(TestCase):
         end=date(2020,9,22)
         self.p = Project(projectname='project',goal=g,category=c, projectstartdate=start, projectenddate=end, projectdescription='some project')
     
-    def test_date_function(self):
-        self.assertTrue(p.timeInDays(), 4)
+    def test_dateFunction(self):
+        self.assertEqual(self.p.timeInDays(), 4)
+
+    def test_string(self):
+        self.assertEqual(str(self.p), 'project')
 
            

@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
+
+
 {% block content %}
+
+{% load static %}
     <h2>Activity Tracker</h2>
     <p> Here is a list of the goals to track in projects and activities</p>
-    <ul>
+    <ul class='list-group'>
         {% for goal in goal_list %}
-            <li>{{ goal.goaltext }}</li>
+            <li class='list-group-item'>{{ goal.goaltext }}</li>
         {% endfor %}
     </ul>
 {% endblock %}

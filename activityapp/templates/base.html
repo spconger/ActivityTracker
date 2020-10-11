@@ -2,24 +2,29 @@
 <html>
     <head>
         <title>Activity Tracker</title>
+        {% load static %}
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="{% static  '/activityapp/activity.css' %}" rel="stylesheet" >
+        
         
        
     </head>
     <body>
+        <!--
         <div class='jumbotron' style="background-color: Navy; color: white;">
             <h1>Activity Tracker</h1>
-        </div>
+        </div>-->
         <nav class="navbar navbar-default">
                 <div class="container-fluid">
                 <div class="navbar-header">
                 <a class="navbar-brand" href="{% url 'index' %}">Activity Tracker</a>
                 </div>
-                <ul class="nav navbar-nav">
-                   
-               
+                <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+                <ul class="nav navbar-nav ">
+                   <li><a href="{% url 'newactivity' %}">New Activity</a></li>
                 </ul>
                 </div>
                 </nav>
